@@ -40,6 +40,8 @@
 %
 
 \def\logo{{\includegraphics[width=20mm]{upclogo.pdf}}}
+\DeclareGraphicsExtensions{.png, .jpg, .pdf}
+\graphicspath{{./packages/}}
 
 %
 % Define text area of page and margin offsets
