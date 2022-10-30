@@ -6,7 +6,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{ociamthesis}[2010/11/22 v2.2 OCIAM thesis class]
 %-------------------------- initial code -----------------------
-\def\logoversion{squarelogo}
 \DeclareOption{beltcrest}{\def\logoversion{beltcrest}}
 \DeclareOption{shieldcrest}{\def\logoversion{shieldcrest}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
@@ -36,41 +35,12 @@
 % The name of your Oxford college (e.g. Christ Church, Pembroke)
 \def\college#1{\gdef\@college{#1}}
 
-
 %
 % Setup choosen crest/logo
 %
 
-\ifthenelse{\equal{\logoversion}{shieldcrest}}%
-{
-% Traditional Oxford shield crest
-%Using latex metafont (Mathematical Institute system)
-\font\crestfont=oxcrest40 scaled\magstep3
-\def\logo{{\crestfont \char1}}
-%For comlab system replace 1st line above with
-%\font\crestfont=crest scaled\magstep3
-}{}
-
-\ifthenelse{\equal{\logoversion}{beltcrest}}%
-{
-% Newer Oxford Belt crest
-%Using latex metafont (Mathematical Institute system)
-\font\beltcrestfont=oxbeltcrest
-\def\logo{{\beltcrestfont \char0}}
-%For comlab system replace 1st line above with
-%\font\beltcrestfont=newcrest
-}{}
-
-\ifthenelse{\equal{\logoversion}{squarelogo}}%
-{
-% Latest Logo, Square version (the default!)
-% you need an oxlogo.eps or oxlogo.pdf file as appropriate
-%\def\logo{{\includegraphics[width=32mm]{oxlogo}}}
-%\def\logo{{\includegraphics[width=20mm]{oxlogo}}}
-%}{}
-
 \def\logo{{\includegraphics[width=20mm]{upclogo.pdf}}}
-}{}
+
 %
 % Define text area of page and margin offsets
 %
@@ -79,7 +49,6 @@
 \setlength{\evensidemargin}{-0.08in}
 \setlength{\textheight}{9.0in}
 \setlength{\textwidth}{6.0in}
-
 
 % Environments
 %
@@ -127,14 +96,7 @@
     {{\@college} \par}
 
 %\vspace*{1ex}
-%    { TALP Research Center \par}
-    
-\vspace*{1ex}
-    { Departament de Ci\`{e}ncies de la Computaci\'{o} \\  Universitat Polit\`ecnica de Catalunya \par}
-    
-\vspace*{1ex}
-    {Supervisors: \\  xxx \par}
-
+%    {Supervisor: xxx \par}
         
 \vspace*{25mm}
     {{\submittedtext} \par}
@@ -185,11 +147,6 @@
 \vspace{0.5cm}
 \begin{quote}}
 {\end{quote}\end{alwayssingle}}
-
-
-
-
-
 
 % ACKNOWLEDGEMENTS
 %
@@ -251,7 +208,6 @@
 \end{center}
 \vspace{0.5cm}}
 {\end{alwayssingle}}
-
 
 %ABSTRACT
 %

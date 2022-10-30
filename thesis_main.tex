@@ -1,8 +1,5 @@
-\documentclass[12pt]{ociamthesis}  %  UPC logo
-%\documentclass[12pt,beltcrest]{ociamthesis} % use old belt crest logo
-%\documentclass[12pt,shieldcrest]{ociamthesis} % use older shield crest logo
+\documentclass[12pt]{ociamthesis}
 
-%load any additional packages
 \usepackage{amssymb}
 \usepackage{graphicx,pstricks}
 \usepackage{graphics}
@@ -13,16 +10,12 @@
 \usepackage{lipsum}  
 \usepackage{ragged2e}
 \usepackage{hangcaption}
-%\usepackage{txfonts}
 \usepackage{palatino}
-%\usepackage[table]{xcolor}
 \usepackage{color}
 \usepackage{graphicx}
 \usepackage{amsmath,amssymb} % define this before the line numbering.
-%\usepackage{ruler}
 \usepackage[noend]{algpseudocode}
 \usepackage{amsmath,amssymb} % define this before the line numbering.
-%\usepackage{ruler}
 \usepackage{color}
 \usepackage{comment}
 \usepackage{bm,nicefrac} % bold math package
@@ -36,11 +29,6 @@
 \SetKwRepeat{Do}{do}{while}
 \usepackage{graphicx}
 \usepackage{color,soul}
-%\usepackage{fancyhdr}
-%\setlength{\headheight}{15pt}
-%\pagestyle{fancy}
-%\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
-%\renewcommand{\sectionmark}[1]{\markright{#1}{}}
 \definecolor{ao}{rgb}{0.0, 0.5, 0.0}
 
 \usepackage{xcolor}
@@ -89,19 +77,12 @@
 
 
 %
-
 \hypersetup{
   colorlinks   = true, %Colours links instead of ugly boxes
   urlcolor     = black, %Colour for external hyperlinks
   linkcolor    = red, %Colour of internal links RoyalBlue
-   % linkcolor    = violet, %Colour of internal links RoyalBlue
-   %linkcolor    =  bluegray, %Colour of internal links
-  %citecolor   = red %Colour of citations
-  %citecolor = blue %black darkblue
   citecolor = darkblue
 }
-%{ \hypersetup{hidelinks} \tableofcontents }
-
 \hypersetup{linktoc = all}
 \hypersetup{linktoc = page} 
 
@@ -174,30 +155,20 @@
 \def\etal{\emph{et al}\onedot}
 %%%%%%%%%%%%%%%%%%%%%%%%%%CVPR %%%%%%%%%%%%%%%%%
 
-
 %input macros (i.e. write your own macros file called mymacros.tex 
 %and uncomment the next line)
 %\include{mymacros}
 
+\title{Your thesis title} 
 
-\title{title} 
+\author{Your name}
+\college{Departament de Ci\`{e}ncies de la Computaci\'{o} \\  Universitat Polit\`ecnica de Catalunya} 
 
-%\author{sasas }
-%\college{Ci\`{e}ncies de la Computaci\'{o}}  %your college
-
-%\college{ {\larger \textit{By}  \vspace{0.3cm} \\ your name} \\  \vspace{0.1cm} Departament de Ci\`{e}ncies de la Computaci\'{o} }
-
-\college{ {\larger \textit{By}  \vspace{0.3cm} \\ your name} }
-
-%\renewcommand{\submittedtext}{change the default text here if needed}
-\degree{Doctor of Philosophy}     %the degree
-\degreedate{Barcelona, February 2021}     
-
+\degree{Doctor of Philosophy}
+\degreedate{Barcelona, Month YYYY}     
    
 %end the preamble and start the document
 \begin{document}
-
-
 
 %this baselineskip gives sufficient line spacing for an examiner to easily
 %markup the thesis with comments
@@ -207,27 +178,25 @@
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 
-
 \maketitle                  % create a title page from the preamble info
+
 \include{dedication}        % include a dedication.tex file
 \include{acknowlegements}   % include an acknowledgements.tex file
 \include{abstract}          % include the abstract
 
 \begin{romanpages}          % start roman page numbering
-\tableofcontents            % generate and include a table of contents
-\listoffigures              % generate and include a list of figures
+	\tableofcontents            % generate and include a table of contents
+	\listoffigures              % generate and include a list of figures
 \end{romanpages}            % end roman page numbering
 
-%now include the files of latex for each of the chapters etc
 \include{chapter1}
 \include{chapter2}
-\include{Chapter3}
-\include{Chapter4}
-\include{Chapter5}
-\include{Chapter6}
+\include{chapter3}
+\include{chapter4}
+\include{chapter5}
+\include{chapter6}
 \include{conclusions}
 
-%now enable appendix numbering format and include any appendices
 \appendix
 \include{appendix1}
 \include{appendix2}
